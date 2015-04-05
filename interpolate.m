@@ -1,0 +1,59 @@
+function out = interpolate(angle, mag)
+    out = zeros(2,2);
+    if (angle >= 0 && angle <= 10)
+        %part1 = (10-angle)/20.0; 
+        %part2 = (10+angle)/20.0;
+        %out(1,:) = [1, mag*part1];
+        %out(2,:) = [9, mag*part2];
+        out(1,:) = [1, mag];
+        out(2,:) = [1, 0];
+    elseif (angle > 10 && angle <= 30)
+        part1 = (30 - angle)/20.0; 
+        part2 = (angle - 10)/20.0;
+        out(1,:) = [1, mag*part1];
+        out(2,:) = [2, mag*part2];
+    elseif (angle > 30 && angle <= 50)
+        part1 = (50 - angle)/20.0; 
+        part2 = (angle - 30)/20.0;
+        out(1,:) = [2, mag*part1];
+        out(2,:) = [3, mag*part2];
+    elseif (angle > 50 && angle <= 70)
+        part1 = (70 - angle)/20.0; 
+        part2 = (angle- 50)/20.0;
+        out(1,:) = [3, mag*part1];
+        out(2,:) = [4, mag*part2];
+    elseif (angle > 70 && angle <= 90)
+        part1 = (90 - angle)/20.0; 
+        part2 = (angle - 70)/20.0;
+        out(1,:) = [4, mag*part1];
+        out(2,:) = [5, mag*part2];
+    elseif (angle > 90 && angle <= 110) 
+        part1 = (110 - angle)/20.0; 
+        part2 = (angle - 90)/20.0;
+        out(1,:) = [5, mag*part1];
+        out(2,:) = [6, mag*part2];
+    elseif (angle > 110 && angle <= 130)
+        part1 = (130 - angle)/20.0; 
+        part2 = (angle - 110)/20.0;
+        out(1,:) = [6, mag*part1];
+        out(2,:) = [7, mag*part2];
+    elseif (angle > 130 && angle <= 150)
+        part1 = (150 - angle)/20.0; 
+        part2 = (angle - 130)/20.0;
+        out(1,:) = [7, mag*part1];
+        out(2,:) = [8, mag*part2];
+    elseif (angle > 150 && angle <= 170);
+        part1 = (170 - angle)/20.0; 
+        part2 = (angle - 150)/20.0;
+        out(1,:) = [8, mag*part1];
+        out(2,:) = [9, mag*part2];
+    else
+        %part1 = (190-angle)/20.0;
+        %part2 = (angle-170)/20.0;
+        %out(1,:) = [1, mag*part1];
+        %out(2,:) = [9, mag*part2];
+        out(1,:) = [9, mag];
+        out(2,:) = [9, 0];
+    end
+
+end
